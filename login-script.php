@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $senha = $_POST['senha'];
 
     // Conectar ao banco de dados
-    $conn = new mysqli('localhost', 'root', '', 'projeto_tcc');
+    $conn = new mysqli('localhost', 'root', '', 'dp');
 
     // Verificar a conexão
     if ($conn->connect_error) {

@@ -40,7 +40,8 @@ if (!$stmt) {
 $stmt->bind_param("sssssssss", $nome, $usuario, $email, $senha_pura,$tipoDocumento, $documento, $municipio, $telefone, $cep);
 
 if ($stmt->execute()) {
-    echo "Usuário cadastrado com sucesso!";
+    header("Location: login.php");
+    exit;
 } else {
     echo "Erro ao cadastrar: " . $stmt->error;
 }

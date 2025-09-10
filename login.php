@@ -7,19 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 
-    <style>
-      /* Rodape */
-      html, body {
-        height: 100%;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-      }
-      main {
-        flex: 1;
-      }
-    </style>
-
+    
 </head>
 <body>
     
@@ -28,7 +16,7 @@
         <img src="img/logo.png" alt="" style="height: 70px;">
         <img src="img/casa.png" alt="" style="height: 40px; margin-left: 60%;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php" style="">Inicio</a>
+    <a class="navbar-brand" href="index.php">Inicio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -108,16 +96,6 @@
        style="position: absolute; top: 210px; width: 800px; height: 675px; margin-left: 1150px;" />
 </main>
 
-<!-- Rodape -->
-  <div class="bg-dark text-light text-center py-3">
-    <div class="container">
-      <p class="mb-0">&copy; 2025 Projeto TCC - Todos os direitos reservados.</p>
-      <p class="mb-0">
-        <a href="#" class="text-light text-decoration-none mx-2">Política de Privacidade</a> |
-        <a href="#" class="text-light text-decoration-none mx-2">Termos de Uso</a>
-      </p>
-    </div>
-  </div>
   
 </body>
 </html>

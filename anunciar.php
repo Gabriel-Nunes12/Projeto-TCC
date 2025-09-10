@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto TCC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <script src="carros.js"></script>
-    <script src="cidades.js"></script>
-<script src="carregarCidades.js"></script>
+    <script src="JavaScript/anuciar js/carros.js"></script>
+    <script src="JavaScript/anuciar js/cidades.js"></script>
+<script src="JavaScript/anuciar js/carregarCidades.js"></script>
   </head>
 <body>
     
@@ -138,13 +137,6 @@
             <p class="text-muted mb-0">Paulistania SP</p>
           </div>
 
-          <div class="bg-white rounded-4 p-2 text-center shadow" style="width: 200px;">
-            <img src="img/gol.png" style="width: 180px; height: 100px;" />
-            <h6 class="mt-2 mb-0">GOL G6</h6>
-            <p class="mb-0">2016</p>
-            <p class="text-danger fw-bold">R$ 35.000</p>
-            <p class="text-muted mb-0">Cabralia SP</p>
-          </div>
 
         </div>
       </div>
@@ -175,7 +167,7 @@
     </select>
     <input type="number" id="ano" placeholder="Ano" class="form-control mb-2">
     <input type="text" id="preco" placeholder="Preço (R$)" class="form-control mb-2">
-    <script src="preco.js"></script>
+    <script src="JavaScript/anuciar js/preco.js"></script>
     <select name="local" id="local" class="form-control mb-2">
     <option value=""></option>
    </select>
@@ -185,7 +177,7 @@
         style="background-color: #333; color: white; border: none; padding: 10px 20px; 
                font-weight: bold; border-radius: 10px; cursor: pointer; width: 100%;">
         PUBLICAR VEÍCULO
-        <script src="botao.js"></script>
+        <script src="JavaScript/anuciar js/botao.js"></script>
       </button>
 </form>
 
