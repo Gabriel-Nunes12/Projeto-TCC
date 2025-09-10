@@ -10,6 +10,8 @@
 <script src="JavaScript/cadastro js/cep.js"></script>
 <script src="JavaScript/cadastro js/documento.js"></script>
 <script src="JavaScript/cadastro js/telefone.js"></script>
+<script src="JavaScript/cadastro js/senha.js"></script>
+
    
 
 </head>
@@ -89,17 +91,27 @@
         <label for="email" class="form-label">Email</label>
         <input type="email" class="form-control" id="email" name="email">
     </div>
-    <div class="col-md-6">
-        <label for="senha" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="senha" name="senha">
-    </div>
+<div class="col-md-6">
+  <label for="senha" class="form-label">Senha</label>
+  <div class="d-flex align-items-center gap-2">
+    <input type="password" class="form-control" id="senha" name="senha">
+    <input type="checkbox" id="mostrarSenha" style="width: auto; height: auto;">
+    <label for="mostrarSenha" class="mb-0">Mostrar</label>
+  </div>
+</div>
+<!--script para ver a senha -->
+
     <div class="col-md-6">
         <label for="confirm_email" class="form-label">Confirme o seu Email</label>
         <input type="email" class="form-control" id="confirm_email" name="confirm_email">
     </div>
     <div class="col-md-6">
         <label for="confirm_senha" class="form-label">Confirme a sua senha</label>
+  <div class="d-flex align-items-center gap-2">
         <input type="password" class="form-control" id="confirm_senha" name="confirm_senha">
+    <input type="checkbox" id="mostrar_conf_Senha" style="width: auto; height: auto;">
+    <label for="mostrarSenha" class="mb-0">Mostrar</label>
+  </div>
     </div>
 <!-- Tipo de Documento -->
 <div class="col-md-6">
