@@ -97,45 +97,7 @@
         <!-- Lista de veículos -->
         <div class="d-flex justify-content-between flex-wrap gap-3" style="margin-top: 30px;">
 
-          <div class="bg-white rounded-4 p-2 text-center shadow" style="width: 200px;">
-            <img src="img/civic.png" style="width: 180px; height: 100px;" />
-            <h6 class="mt-2 mb-0">HONDA-CIVIC</h6>
-            <p class="mb-0">2019</p>
-            <p class="text-danger fw-bold">R$ 100.000</p>
-            <p class="text-muted mb-0">Duartina SP</p>
-          </div>
-
-          <div class="bg-white rounded-4 p-2 text-center shadow" style="width: 200px;">
-            <img src="img/tucson.png" style="width: 180px; height: 100px;" />
-            <h6 class="mt-2 mb-0">TUCSON</h6>
-            <p class="mb-0">2008</p>
-            <p class="text-danger fw-bold">R$ 25.000</p>
-            <p class="text-muted mb-0">Borebi SP</p>
-          </div>
-
-          <div class="bg-white rounded-4 p-2 text-center shadow" style="width: 200px;">
-            <img src="img/hb20.png" style="width: 180px; height: 100px;" />
-            <h6 class="mt-2 mb-0">HB20</h6>
-            <p class="mb-0">&nbsp;</p>
-            <p class="text-danger fw-bold">R$ 45.000</p>
-            <p class="text-muted mb-0">Paulistania SP</p>
-          </div>
-
-          <div class="bg-white rounded-4 p-2 text-center shadow" style="width: 200px;">
-            <img src="img/hilux.png" style="width: 180px; height: 100px;" />
-            <h6 class="mt-2 mb-0">HILUX</h6>
-            <p class="mb-0">2019</p>
-            <p class="text-danger fw-bold">R$ 150.000</p>
-            <p class="text-muted mb-0">Bauru SP</p>
-          </div>
-
-          <div class="bg-white rounded-4 p-2 text-center shadow" style="width: 200px;">
-            <img src="img/saveiro.png" style="width: 180px; height: 100px;" />
-            <h6 class="mt-2 mb-0">SAVEIRO</h6>
-            <p class="mb-0">2022</p>
-            <p class="text-danger fw-bold">R$ 62.000</p>
-            <p class="text-muted mb-0">Paulistania SP</p>
-          </div>
+          
 
 
         </div>
@@ -149,77 +111,80 @@
           <div style="width: 200px; height: 100px; border-radius: 50px; background-color: #5a595b; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                
             <!-- Formulário para envio de imagem e descrições -->
-<form style="display:flex;flex-direction:column;align-items:center;gap:10px;">
-    <!-- Botão personalizado para selecionar a imagem -->
+<form action="processa_veiculo.php" method="POST" enctype="multipart/form-data" style="display:flex;flex-direction:column;align-items:center;gap:10px;">
     <label for="file-upload" class="custom-file-upload">
-        <img id="preview" src="img/upd.jpg" alt="Pré-visualização" 
-             style="width: 200px; height: 200px; object-fit: cover; cursor: pointer;">
+        <img id="preview" src="img/upd.jpg" alt="Pré-visualização" style="width: 200px; height: 200px; object-fit: cover; cursor: pointer;">
     </label>
-
-    <!-- Input de imagem escondido -->
     <input id="file-upload" type="file" name="image" accept="image/*" hidden>
-          
-    <select id="marca" class="form-control mb-2">
-    <option value="">Selecione uma Marca</option>
-</select>
-    <select id="modelo" class="form-control mb-2">
-    <option value="">Selecione um Modelo</option>
+
+    <select id="marca" name="marca" class="form-control mb-2">
+        <option value="">Selecione uma Marca</option>
     </select>
-    <input type="number" id="ano" placeholder="Ano" class="form-control mb-2">
-    <input type="text" id="preco" placeholder="Preço (R$)" class="form-control mb-2">
+
+    <select id="modelo" name="modelo" class="form-control mb-2">
+        <option value="">Selecione um Modelo</option>
+    </select>
+
+    <input type="number" id="ano" name="ano" placeholder="Ano" class="form-control mb-2">
+
+    <select id="cambio" name="cambio" class="form-control mb-2" required>
+      <option value="">Selecione o câmbio</option>
+      <option value="Manual">Manual</option>
+      <option value="Automático">Automático</option>
+    </select>
+
+    <select id="direcao_hidraulica" name="direcao_hidraulica" class="form-control mb-2" required>
+      <option value="">Direção hidráulica?</option>
+      <option value="Sim">Sim</option>
+      <option value="Não">Não</option>
+    </select>
+
+    <select id="trava_eletrica" name="trava_eletrica" class="form-control mb-2" required>
+      <option value="">Trava elétrica?</option>
+      <option value="Sim">Sim</option>
+      <option value="Não">Não</option>
+    </select>
+
+    <input type="text" id="km" name="km" placeholder="km rodados" class="form-control mb-2">
+    <script src="JavaScript/anuciar js/km.js"></script>
+
+    <select id="combustivel" name="combustivel" class="form-control mb-2" required>
+      <option value="">Selecione o combustível</option>
+      <option value="Gasolina">Gasolina</option>
+      <option value="Etanol">Etanol</option>
+      <option value="Diesel">Diesel</option>
+      <option value="Flex">Flex</option>
+      <option value="Elétrico">Elétrico</option>
+      <option value="Híbrido">Híbrido</option>
+    </select>
+
+    <input type="text" id="preco" name="preco" placeholder="Preço (R$)" class="form-control mb-2">
     <script src="JavaScript/anuciar js/preco.js"></script>
+
     <select name="local" id="local" class="form-control mb-2">
-    <option value=""></option>
-   </select>
+      <option value="">Selecione o local</option>
+    </select>
 
-
-    <button type="button" onclick="adicionarPublicacao()" 
-        style="background-color: #333; color: white; border: none; padding: 10px 20px; 
-               font-weight: bold; border-radius: 10px; cursor: pointer; width: 100%;">
+    <button type="submit" style="background-color: #333; color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 10px; cursor: pointer; width: 100%;">
         PUBLICAR VEÍCULO
-        <script src="JavaScript/anuciar js/botao.js"></script>
-      </button>
+    </button>
 </form>
 
 
         </div>
         </div>
-        <!-- Painel Feedback -->
-        <div style="border-radius: 30px; padding: 20px; background: transparent;">
-          <div style="text-align: left; margin-bottom: 8px;">
-            <span style="display:inline-block; background:#000; color:white; padding:6px 24px; border-radius:20px; font-weight:bold;">Feedback</span>
-          </div>
-          <div style="background-color: #3a3a3a; border-radius: 8px; padding: 12px; box-shadow: 8px 8px 0 #000;">
-            <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 6px; border-bottom: 1px solid rgba(255,255,255,0.06);">
-              <div style="display:flex; gap:8px; align-items:center;">
-                <span style="display:inline-block; width:22px; height:22px; border-radius:50%; background:#111;"></span>
-                <strong style="color:#ffffff;">Vendedor muito confiável!</strong>
-              </div>
-              
-              <span style="color:#ffffff;">★</span>
-            </div>
-            
-            <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 6px; border-bottom: 1px solid rgba(240, 237, 237, 0.06);">
-              <div style="display:flex; gap:8px; align-items:center;">
-                <span style="display:inline-block; width:22px; height:22px; border-radius:50px; background:#111;"></span>
-                <strong style="color:#ffffff;">veiculo em bom estado!</strong>
-              </div>
-              <span style="color:#ffffff;">★</span>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 6px;">
-              <div style="display:flex; gap:8px; align-items:center;">
-                <span style="display:inline-block; width:22px; height:22px; border-radius:50%; background:#111;"></span>
-                <strong style="color:#ffffff;">Adorei!!</strong>
-              </div>
-              <span style="color:#ffffff;">★</span>
-            </div>
-          </div>
-        </div>
 
-      </div>
     </main>
   </div>
 </div>
-
+<script>
+document.getElementById('file-upload').addEventListener('change', function(event) {
+    const [file] = event.target.files;
+    if (file) {
+        const preview = document.getElementById('preview');
+        preview.src = URL.createObjectURL(file);
+    }
+});
+</script>
 </body>
 </html>
