@@ -18,6 +18,7 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
 
 // Dados do formulário
 $modelo = $_POST['modelo'] ?? '';
+$marca = $_POST['marca'];
 $ano = (int)($_POST['ano'] ?? 0);
 $combustivel = $_POST['combustivel'] ?? '';
 $cambio = $_POST['cambio'] ?? '';
@@ -30,7 +31,7 @@ $usuario_id = 1; // Exemplo fixo — ou $_SESSION['vendedor_id']
 // Preparar comando SQL
 // Tipos para bind_param:
 // s = string, i = integer, d = double (float)
-$stmt = $conn->prepare("INSERT INTO veiculos (imagem_veiculo, modelo, ano, combustivel, cambio, direcao_hidraulica, trava_eletrica, km, preco, usuario_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO veiculos (imagem_veiculo, modelo, marca, ano, combustivel, cambio, direcao_hidraulica, trava_eletrica, km, preco, usuario_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
 // Corrigindo tipos: 
 // imagem_veiculo (string) -> s
@@ -44,7 +45,8 @@ $stmt = $conn->prepare("INSERT INTO veiculos (imagem_veiculo, modelo, ano, combu
 // preco (float/double) -> d
 // vendedor_id (int) -> i
 
-$stmt->bind_param("ssissiiidi", $caminho_imagem, $modelo, $ano, $combustivel, $cambio, $direcao, $trava, $km, $preco, $usuario_id);
+$stmt->bind_param("sssissiidii", $caminho_imagem, $modelo, $marca, $ano, $combustivel, $cambio, $direcao, $trava, $km, $preco, $usuario_id);
+
 
 
 // Executar

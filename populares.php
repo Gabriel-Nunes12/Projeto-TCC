@@ -124,48 +124,42 @@
       </div>
     </div>
 
-  <!-- Painel 2 - FILTRO -->
+
+<form action="filtros.php" method="GET">    <!-- Painel 2 - FILTRO -->
 <div style="height: 390px; border-radius: 30px; background-color: #2e2e2e; padding: 5px; color: white;">
   <h4 class="text-center mb-4">FILTROS</h4>
 
   <!-- Primeiro select-->
+  
   <div class="mb-3">
-    <label for="opcoes1" class="form-label">Opções de Escolha Automoveis:</label>
-    <select id="opcoes1" class="form-select">
-      <option value="todos">Todos</option>
-      <option value="carros">Carros</option>
-      <option value="motos">Motos</option>
-      <option value="populares">Populares</option>
-      <option value="populares">Luxo</option>
+    <label>Escolha a marca</label>
+    <select id="marca" name="marca" class="form-control mb-2">
+        <option value="">Selecione uma Marca</option>
     </select>
+    <script src="JavaScript/anuciar js/carros.js"></script>
   </div>
 
   <!-- Segundo select-->
   <div class="mb-3">
+    <label>Escolha o modelo</label>
+        <select id="modelo" name="modelo" class="form-control mb-2">
+        <option value="">Selecione um Modelo</option>
+    </select>
+  </div>
+
+ <!-- Terceiro select-->
+<div class="mb-3">
     <label for="opcoes2" class="form-label">Opções de Preços:</label>
-    <select id="opcoes2" class="form-select">
+    <select id="opcoes2" class="form-select" name="preco">
       <option value="0-20000">Até R$ 20.000</option>
       <option value="20000-50000">R$ 20.000 - R$ 50.000</option>
       <option value="50000-100000">R$ 50.000 - R$ 100.000</option>
       <option value="100000+">Acima de R$ 100.000</option>
     </select>
   </div>
-
- <!-- Terceiro select-->
-  <div class="mb-3">
-    <label for="opcoes2" class="form-label">Opções de Marcas:</label>
-    <select id="opcoes2" class="form-select">
-      <option value="volkswagen">Todos</option>
-      <option value="chevrolet">Chevrolet</option>
-      <option value="fiat">Fiat</option>
-      <option value="Honda">Honda</option>
-      <option value="volkswagen">Volkswagen</option>
-    </select>
-  </div>
-
-  <button class="btn btn-light w-100 mt-3 fw-bold">APLICAR FILTROS</button>
+  <button type="submit" class="btn btn-light w-100 mt-3 fw-bold">APLICAR FILTROS</button>
 </div>
-
+</form>
 
     <!-- Painel 3 -->
     <div style="height: 350px; border-radius: 30px; background-color: #5a595b; padding: 20px;">

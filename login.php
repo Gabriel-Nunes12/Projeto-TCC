@@ -60,7 +60,7 @@
 
 <label for="login_senha" class="fw-bold">Senha</label>
 <div class="input-group mb-3">
-  <input type="password" class="form-control" id="login_senha" name="login_senha"
+  <input type="password" class="form-control" id="senha" name="senha"
          style="background-color: #ffffff; border: none;">
   <span class="input-group-text" style="cursor: pointer; background-color: #ffffff; border: none;">
     <i class="bi bi-eye" id="toggleLoginSenha"></i>
