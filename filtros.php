@@ -64,7 +64,7 @@ while ($carro = $result->fetch_assoc()) {
     echo "<div class='col-md-4 mb-4'>";
     echo "<div class='card' style='border-radius:15px; overflow:hidden;'>";
     // Mostra a imagem
-    echo "<img src='uploads/{$carro['imagem_veiculo']}' class='card-img-top' alt='{$carro['modelo']}' style='height:200px; object-fit:cover;'>";
+echo "<img src='{$carro['imagem']}' class='card-img-top' alt='{$carro['modelo']}' style='height:200px; object-fit:cover;'>";
     echo "<div class='card-body' style='background:#2e2e2e; color:white;'>";
     echo "<h5 class='card-title'>{$carro['marca']} - {$carro['modelo']} ({$carro['ano']})</h5>";
     echo "<p class='card-text'>Combustível: {$carro['combustivel']}</p>";

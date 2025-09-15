@@ -1,46 +1,38 @@
 <?php
+session_start();
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Recebe os dados do formulário
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $email = $_POST['email'] ?? '';
+    $senha = $_POST['senha'] ?? '';
 
-    // Conectar ao banco de dados
     $conn = new mysqli('localhost', 'root', '', 'dp');
+    if ($conn->connect_error) die("Falha na conexão: " . $conn->connect_error);
 
-    // Verificar a conexão
-    if ($conn->connect_error) {
-        die("Falha na conexão: " . $conn->connect_error);
-    }
-
-    // Consultar o banco de dados para verificar o usuário
-    $sql = "SELECT * FROM usuarios WHERE email = ?";
+$sql = "SELECT id_usuario, nome_completo, senha FROM usuarios WHERE email = ?";
     if ($stmt = $conn->prepare($sql)) {
-        // Bind dos parâmetros
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
 
-        // Verificar se o usuário foi encontrado
         if ($result->num_rows === 1) {
             $row = $result->fetch_assoc();
-            // Comparar a senha digitada com a senha armazenada no banco de dados
+
+            // Comparação simples (modo atual)
             if ($senha === $row['senha']) {
-                echo "Login bem-sucedido!";
-                // Redirecionar para a página interna ou painel do usuário
-                header("Location: populares.php"); // Exemplo de redirecionamento
+                // 🔹 Salva apenas o ID na sessão
+$_SESSION['id_usuario'] = $row['id_usuario'];
+
+                header("Location: meu_perfil.php");
                 exit();
             } else {
-                echo "Senha incorreta!";
+                echo "<script>alert('Senha incorreta!'); window.location.href='login.php';</script>";
             }
         } else {
-            echo "Usuário não encontrado!";
+            echo "<script>alert('Usuário não encontrado!'); window.location.href='login.php';</script>";
         }
 
-        // Fechar a declaração
         $stmt->close();
     }
-
-    // Fechar a conexão
     $conn->close();
 }
 ?>

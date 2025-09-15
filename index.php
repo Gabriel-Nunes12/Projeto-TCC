@@ -21,6 +21,23 @@
     </style>
 </head>
 <body>
+
+  <!-- Navbar -->
+ 
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.php">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="populares.php">Populares</a></li>
+          <li class="nav-item"><a class="nav-link" href="planos.php">Planos</a></li>
+          <li class="nav-item"><a class="nav-link" href="suporte.php">Suporte</a></li>
+          <li class="nav-item"><a class="nav-link" href="anunciar.php">Anunciar</a></li>
+          <li class="nav-item"><a class="nav-link" href="meu_perfil.php">Meu Perfil</a></li>
+          <li class="nav-item"><a class="nav-link" href="logout.php">Sair</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
     
   <!-- Cabecario -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">

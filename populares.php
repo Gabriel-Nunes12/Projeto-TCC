@@ -23,6 +23,7 @@
 </head>
 <body>
     
+    
   <!-- Cabecario -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <img src="img/logo.png" alt="" style="height: 70px;">
@@ -63,7 +64,7 @@
   
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Suporte</a></li>
-    <li><a class="dropdown-item" href="#">Notificação</a></li>
+    <li><a class="dropdown-item" href="meu_perfil.php">meu Perfil</a></li>
   </ul>
 </div>
 <div class="btn-group">
