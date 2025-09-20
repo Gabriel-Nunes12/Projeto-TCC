@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Upload AJAX</title>
+</head>
+<body>
+
+<h2>Teste Publicação Veículo</h2>
+
+<form id="form-publicacao" enctype="multipart/form-data">
+    <input type="file" id="file-upload" name="image" accept="image/*"><br><br>
+    <input type="text" id="marca" name="marca" placeholder="Marca"><br><br>
+    <input type="text" id="modelo" name="modelo" placeholder="Modelo"><br><br>
+    <input type="number" id="ano" name="ano" placeholder="Ano"><br><br>
+    <input type="text" id="preco" name="preco" placeholder="Preço"><br><br>
+    <button type="button" onclick="adicionarPublicacao()">Publicar</button>
+</form>
+
+<script>
+function adicionarPublicacao() {
+    const formData = new FormData();
+    const imgInput = document.getElementById("file-upload").files[0];
+    const marca = document.getElementById("marca").value.trim();
+    const modelo = document.getElementById("modelo").value.trim();
+    const ano = document.getElementById("ano").value.trim();
+    const preco = document.getElementById("preco").value.trim();
+
+    if (!imgInput || !marca || !modelo || !ano || !preco) {
+        alert("Preencha todos os campos!");
+        return;
+    }
+
+    formData.append("image", imgInput);
+    formData.append("marca", marca);
+    formData.append("modelo", modelo);
+    formData.append("ano", ano);
+    formData.append("preco", preco);
+
+    fetch("teste_processa.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert("Resposta do servidor: " + JSON.stringify(data));
+        console.log("Resposta detalhada:", data);
+    })
+    .catch(err => {
+        alert("Erro na conexão com o servidor. Veja console para detalhes.");
+        console.error(err);
+    });
+}
+</script>
+
+</body>
+</html>

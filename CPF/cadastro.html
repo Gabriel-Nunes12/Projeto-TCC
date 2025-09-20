@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="fundo_cadas">
+
+
+    <nav id="menu">
+    <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="cadastro.html">cadastro</a></li>
+        <li><a href="#">sobre</a></li>
+        <li><a href="#">contato</a></li>
+    </ul>
+    </nav> 
+
+    <main>
+    <form action="index.php" method="POST">
+ <input type="text" name="nome" placeholder="nome">
+ <br>
+  <input type="text" name="sobrenome" placeholder="sobrenome">
+<br>
+ <input type="email" name="email" placeholder="email">
+ <br>
+ <input type="password" name="senha" placeholder="senha">
+ <input type="checkbox" onclick="senha.type = this.checked ? 'text' : 'password'">
+<br>
+ <input type="text" name="CPF" placeholder="CPF" maxlength="15" OnKeyPress="formatar(' ###.###.###-##',this)">
+
+<script>  
+  function formatar(mascara, documento) {
+    var i = documento.value.length;
+    var saida = '#';
+    var texto = mascara.substring(i);
+    while (texto.substring(0, 1) != saida && texto.length ) {
+      documento.value += texto.substring(0, 1);
+      i++;
+      texto = mascara.substring(i);
+    }
+  }
+</script>
+   <br>
+            <div class="container-button">
+                <button type="reset">Limpar</button>
+                <button type="submit">continuar</button>
+            </div>
+    </form>
+    </main>
+</body>
+</html>
+

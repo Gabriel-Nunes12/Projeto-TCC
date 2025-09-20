@@ -1,0 +1,136 @@
+/* 
+ * login.css - Estilos específicos para a página login.php
+ * Contém os estilos para a página de login de usuários
+ */
+
+/* Estrutura principal da página */
+.login-html, .login-body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-main {
+    flex: 1;
+}
+
+/* Container flexível para layout principal */
+.login-container-flex {
+    height: calc(950px - 70px);
+    display: flex;
+}
+
+/* Barra lateral com anúncio */
+.login-sidebar {
+    background-color: #f8f9fa;
+    width: 180px;
+    padding-top: 20px;
+}
+
+.login-sidebar-img {
+    height: 340px;
+    width: 175px;
+    margin-top: 200px;
+}
+
+/* Painel de formulário de login */
+.login-painel-formulario {
+    height: 550px;
+    width: 380px;
+    margin-top: 120px;
+    margin-left: 200px;
+    border-radius: 30px;
+    background-color: #cac9ca;
+    padding: 30px;
+    box-shadow: 10px 10px 0px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.login-titulo-principal {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.login-titulo-secundario {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.login-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.login-input {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.login-botao {
+    background-color: #212529;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.login-botao:hover {
+    background-color: #000;
+}
+
+.login-link-senha {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Imagens decorativas */
+.login-imagem-decorativa-1 {
+    position: absolute;
+    top: 100px;
+    width: 750px;
+    height: 650px;
+    margin-left: 770px;
+}
+
+.login-imagem-decorativa-2 {
+    position: absolute;
+    top: 210px;
+    width: 800px;
+    height: 675px;
+    margin-left: 1150px;
+}
+
+/* Rodapé */
+.login-rodape {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.login-rodape-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.login-rodape-link:hover {
+    text-decoration: underline;
+}

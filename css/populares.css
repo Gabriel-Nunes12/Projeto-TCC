@@ -1,0 +1,153 @@
+/* 
+ * populares.css - Estilos específicos para a página populares.php
+ * Contém os estilos para a página de veículos populares
+ */
+
+/* Estrutura principal da página */
+.populares-html, .populares-body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.populares-main {
+    flex: 1;
+}
+
+/* Container flexível para layout principal */
+.populares-container-flex {
+    height: calc(950px - 70px);
+    display: flex;
+}
+
+/* Barra lateral com anúncio */
+.populares-sidebar {
+    background-color: #f8f9fa;
+    width: 180px;
+    padding-top: 20px;
+}
+
+.populares-sidebar-img {
+    height: 340px;
+    width: 175px;
+    margin-top: 200px;
+}
+
+/* Área principal dos painéis de veículos */
+.populares-painel-area {
+    flex-grow: 1;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+
+/* Painéis de destaque de veículos */
+.populares-painel-destaque {
+    height: 350px;
+    border-radius: 30px;
+    background-color: #5a595b;
+    padding: 20px;
+}
+
+.populares-painel-titulo {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Container para os cards de carros */
+.populares-carros-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+/* Cards individuais de carros */
+.populares-carro-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.populares-carro-imagem {
+    width: 180px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.populares-carro-nome {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.populares-carro-ano {
+    margin-bottom: 5px;
+}
+
+.populares-carro-preco {
+    color: #dc3545;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.populares-carro-local {
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+/* Painel de filtros */
+.populares-painel-filtro {
+    height: 390px;
+    border-radius: 30px;
+    background-color: #2e2e2e;
+    padding: 20px;
+    color: white;
+}
+
+.populares-filtro-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.populares-filtro-label {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.populares-filtro-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.populares-filtro-botao {
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.populares-rodape {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.populares-rodape-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.populares-rodape-link:hover {
+    text-decoration: underline;
+}

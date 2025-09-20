@@ -1,0 +1,131 @@
+/* 
+ * index.css - Estilos específicos para a página index.php
+ * Contém os estilos para a página inicial do site
+ */
+
+/* Estrutura principal da página */
+.index-html, .index-body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.index-main {
+    flex: 1;
+}
+
+/* Container flexível para layout principal */
+.index-container-flex {
+    height: calc(950px - 70px);
+    display: flex;
+}
+
+/* Barra lateral com anúncio */
+.index-sidebar {
+    background-color: #f8f9fa;
+    width: 180px;
+    padding-top: 20px;
+}
+
+.index-sidebar-img {
+    height: 340px;
+    width: 175px;
+    margin-top: 200px;
+}
+
+/* Painel principal de destaque */
+.index-painel-principal {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    position: relative;
+}
+
+.index-painel-destaque {
+    margin-top: 130px;
+    width: 750px;
+    height: 430px;
+    border-radius: 30px;
+    background-color: #5a595b;
+    padding: 20px;
+}
+
+.index-painel-titulo {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Container para os cards de carros em destaque */
+.index-carros-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+/* Cards individuais de carros */
+.index-carro-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.index-carro-imagem {
+    width: 180px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.index-carro-nome {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.index-carro-ano {
+    margin-bottom: 5px;
+}
+
+.index-carro-preco {
+    color: #dc3545;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.index-carro-local {
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+/* Imagem decorativa lateral */
+.index-imagem-decorativa {
+    position: absolute;
+    top: 100px;
+    width: 600px;
+    height: 580px;
+    margin-left: 1124px;
+}
+
+/* Rodapé */
+.index-rodape {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.index-rodape-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.index-rodape-link:hover {
+    text-decoration: underline;
+}
